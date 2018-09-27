@@ -30,12 +30,12 @@ function startApp() {
                     name: "choice",
                     type: "rawlist",
                     choices: function() {
-                                var saleItemsArray = [];
-                                for (var i = 0; i < results.length; i++) {
-                                saleItemsArray.push(results[i].product_name + " : $" + results[i].price);
-                                // saleItemsArray.push(results.product_name + ": $" + results[i].price);
+                        var saleItemsArray = [];
+                        for (var i = 0; i < results.length; i++) {
+                            // saleItemsArray.push(results[i].product_name + ": $" + results[i].price);
+                            saleItemsArray.push(results[i].product_name + ": $" + results[i].price);
 
-                                }
+                        }
                         return saleItemsArray;
                     },
                     message: "Please select an item to purchase"
@@ -62,7 +62,7 @@ function startApp() {
 
 
         }
-        connection.end();
+        // connection.end();
     }
     )
 }
